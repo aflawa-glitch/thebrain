@@ -1,0 +1,9 @@
+Analysis Report
+
+Headers Checked:
+- Content-Security-Policy
+- Strict-Transport-Security
+
+Results:
+- Content-Security-Policy: Present
+- Strict-Transport-Security: Missing

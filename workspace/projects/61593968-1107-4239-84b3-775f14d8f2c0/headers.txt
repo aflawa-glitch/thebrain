@@ -1,0 +1,8 @@
+import requests
+
+url = 'http://bumblebebe.co.id'
+response = requests.get(url)
+
+with open('headers.txt', 'w') as file:
+    for header, value in response.headers.items():
+        file.write(f'{header}: {value}\n')

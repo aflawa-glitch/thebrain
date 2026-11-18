@@ -1,0 +1,10 @@
+# Open the server.log file and read its contents
+with open('fake_server.log', 'r') as file:
+    lines = file.readlines()
+
+# Filter lines containing 'failed login'
+failed_login_lines = [line for line in lines if 'failed login' in line]
+
+# Save the filtered lines to failed_logins.txt
+with open('failed_logins.txt', 'w') as file:
+    file.writelines(failed_login_lines)

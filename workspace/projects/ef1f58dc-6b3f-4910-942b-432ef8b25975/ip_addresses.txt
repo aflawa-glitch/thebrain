@@ -1,0 +1,13 @@
+import re
+
+# Read the content of failed_logins.txt
+with open('failed_logins.txt', 'r') as file:
+    content = file.read()
+
+# Use regular expressions to find all IP addresses
+ip_addresses = re.findall(r'\b(?:\d{1,3}\.){3}\d{1,3}\b', content)
+
+# Write the IP addresses to ip_addresses.txt
+with open('ip_addresses.txt', 'w') as file:
+    for ip in ip_addresses:
+        file.write(ip + '\n')

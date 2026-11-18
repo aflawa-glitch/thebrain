@@ -1,0 +1,13 @@
+from collections import Counter
+
+# Read IP addresses from the file
+with open('ip_addresses.txt', 'r') as file:
+    ip_addresses = file.readlines()
+
+# Count occurrences of each IP address
+ip_counts = Counter(ip_addresses)
+
+# Save the results to ip_counts.txt
+with open('ip_counts.txt', 'w') as file:
+    for ip, count in ip_counts.items():
+        file.write(f'{ip.strip()} {count}\n')
